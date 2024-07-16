@@ -8,6 +8,33 @@ This repository contains examples and notes on RabbitMQ, a distributed message b
 
 RabbitMQ is a robust message broker that supports various messaging patterns, enabling scalable and reliable communication between services. This repository covers installation, core concepts, and common messaging patterns used with RabbitMQ.
 
+## Table of Contents
+
+- [About](#about)
+- [Description](#description)
+- [Installation](#installation)
+  - [Windows and Docker Installation](#windows-and-docker-installation)
+  - [Chocolatey Installation (Preferred)](#chocolatey-installation-preferred)
+- [Core Concepts](#core-concepts)
+  - [Message Broker](#message-broker)
+  - [Producer](#producer)
+  - [Consumer](#consumer)
+  - [Exchanges](#exchanges)
+  - [Queues](#queues)
+  - [Bindings](#bindings)
+  - [Connections and Channels](#connections-and-channels)
+- [Common Messaging Patterns](#common-messaging-patterns)
+  - [Competing Consumers](#competing-consumers)
+  - [Publish/Subscribe](#publishsubscribe)
+  - [Routing](#routing)
+  - [Topics](#topics)
+  - [Request/Reply](#requestreply)
+- [Example Code](#example-code)
+  - [Sending a Message (Python)](#sending-a-message-python)
+  - [Receiving a Message (Python)](#receiving-a-message-python)
+- [Notes](#notes)
+- [References](#references)
+
 ## Installation
 
 ### Windows and Docker Installation
@@ -104,5 +131,10 @@ channel.start_consuming()
 
 ## Notes
 If you're interested in learning more or want more detailed explanations, please refer to [this Google Doc](https://docs.google.com/document/d/1nyqWjwtteHgaWfPvPUkoTdk0CyLFYVVjTEfRCv_BpLM/edit?usp=sharing).
+
+## References
+
+- [RabbitMQ YouTube Playlist](https://www.youtube.com/playlist?list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO)
+- [RabbitMQ Official Documentation](https://www.rabbitmq.com/docs)
 
 
