@@ -74,7 +74,7 @@ Enables two-way communication between services, with a requestor sending a messa
 ## Example Code
 
 ### Sending a Message (Python)
-```sh
+```python
 import pika
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
@@ -87,7 +87,7 @@ channel.basic_publish(exchange='', routing_key='letterbox', body=message)
 ```
 
 ### Receiving a Message (Python)
-```sh
+```python
 import pika
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
