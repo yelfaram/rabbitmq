@@ -70,3 +70,39 @@ Routes messages based on patterns in routing keys, supporting wildcard matches f
 
 ### Request/Reply
 Enables two-way communication between services, with a requestor sending a message and waiting for a reply from the replier.
+
+## Example Code
+
+### Sending a Message (Python)
+```sh
+import pika
+
+connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+channel = connection.channel()
+
+channel.queue_declare(queue='letterbox')
+message = "Hello world"
+
+channel.basic_publish(exchange='', routing_key='letterbox', body=message)
+```
+
+### Receiving a Message (Python)
+```sh
+import pika
+
+connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+channel = connection.channel()
+
+channel.queue_declare(queue='letterbox')
+
+def callback(ch, method, properties, body):
+    print(f"Received new message: {body}")
+
+channel.basic_consume(queue='letterbox', auto_ack=True, on_message_callback=callback)
+channel.start_consuming()
+```
+
+## Notes
+If you're interested in learning more or want more detailed explanations, please refer to [this Google Doc](https://docs.google.com/document/d/1nyqWjwtteHgaWfPvPUkoTdk0CyLFYVVjTEfRCv_BpLM/edit?usp=sharing).
+
+
