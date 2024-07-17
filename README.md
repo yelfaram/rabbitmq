@@ -137,4 +137,6 @@ If you're interested in learning more or want more detailed explanations, please
 - [RabbitMQ YouTube Playlist](https://www.youtube.com/playlist?list=PLalrWAGybpB-UHbRDhFsBgXJM1g6T4IvO)
 - [RabbitMQ Official Documentation](https://www.rabbitmq.com/docs)
 
+---
 
+*Notes compiled with thanks to the above references.*
